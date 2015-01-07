@@ -1,12 +1,11 @@
 package sk.bsmk.bdd.todo;
 
-import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.Selenide;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * Created by bsmk on 6/20/14.
@@ -18,17 +17,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 )
 public class TodoTest {
 
-  // TODO gradle has problem to run chromedriver
-  //@BeforeClass
+  @BeforeClass
   public static void beforeClass() {
-    System.setProperty("webdriver.chrome.driver",
-        "src/test/resources/drivers/chromedriver");
-    WebDriverRunner.setWebDriver(new ChromeDriver());
+    System.setProperty("browser", "phantomjs");
+    System.setProperty("phantomjs.binary.path", "src/test/resources/drivers/phantomjs-1.9.8-linux-x86_64/bin/phantomjs");
   }
 
-  //@AfterClass
+  @AfterClass
   public static void afterClass() {
-    WebDriverRunner.closeWebDriver();
+    Selenide.close();
   }
 
 }

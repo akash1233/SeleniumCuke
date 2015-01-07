@@ -11,14 +11,14 @@ public final class TodoPage {
   private TodoPage() {}
 
   public static void open() {
-    Selenide.open("http://todomvc.com/architecture-examples/emberjs/");
+    Selenide.open("http://todomvc.com/examples/emberjs/");
   }
 
   public static void clickToggleAll() {
     Selenide.$("#toggle-all").click();
   }
 
-  public static void clickClearCopleted() {
+  public static void clickClearCompleted() {
     Selenide.$("#clear-completed").click();
   }
 

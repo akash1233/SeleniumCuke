@@ -20,7 +20,7 @@ public class TodoStepDefs {
   public void thereAreNoTodos() {
     if (TodoPage.getAllTodos().size() > 0) {
       TodoPage.clickToggleAll();
-      TodoPage.clickClearCopleted();
+      TodoPage.clickClearCompleted();
     }
   }
 
