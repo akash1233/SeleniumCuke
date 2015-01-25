@@ -10,10 +10,10 @@ repositories {
 dependencies {
 
   compile 'com.codeborne:selenide:2.15'
-
   testCompile 'info.cukes:cucumber-java:1.2.0'
   testCompile 'info.cukes:cucumber-junit:1.2.0'
-
+  testCompile 'org.seleniumhq.selenium:selenium-java:2.44.0'
+  testCompile 'org.seleniumhq.selenium:selenium-firefox-driver:2.44.0'
   testCompile 'com.codeborne:phantomjsdriver:1.2.1'
 
 }

@@ -19,8 +19,8 @@ public class TodoTest {
 
   @BeforeClass
   public static void beforeClass() {
-    System.setProperty("browser", "phantomjs");
-    System.setProperty("phantomjs.binary.path", "src/test/resources/drivers/phantomjs-1.9.8-linux-x86_64/bin/phantomjs");
+      System.setProperty("browser", "firefox");
+      //System.setProperty("phantomjs.binary.path", "src/test/resources/drivers/phantomjs-1.9.8-linux-x86_64/bin/phantomjs");
   }
 
   @AfterClass
